@@ -1,0 +1,29 @@
+
+//Teste Create a Meeting
+{
+    "topic":"Teste API UNICO",
+    "duration":"60",
+    "start_time":"2021-06-07 17:00:00",
+    "password":"123"
+
+}
+
+
+//Teste get a Recording
+{
+    "meetingId": ""
+}
+
+
+//Teste get a Meeting
+{
+    "userId":
+}
+
+//Teste de envio de Chat
+{  
+
+    "texto": "Teste API 55x",
+    "contato": "email"
+    
+}

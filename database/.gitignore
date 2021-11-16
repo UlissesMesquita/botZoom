@@ -1,0 +1,5 @@
+*.sqlite*
+*.env.example
+node_module/
+docker/
+vendor/

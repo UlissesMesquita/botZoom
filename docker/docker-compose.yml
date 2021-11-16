@@ -1,0 +1,33 @@
+version: '3.7'
+services:
+
+  app:
+    build:
+      context: .
+      dockerfile: .
+    container_name: php
+    restart: unless-stopped
+    tty: true
+    working_dir: /var/www/html
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - "80:80"
+      - "443:443"
+      - "6001:6001"
+
+  database:
+    image: bitnami/mariadb:latest
+    container_name: database
+    restart: unless-stopped
+    expose:
+      - 3306
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./docker/database/data:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=dados_meeting
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
+      - MARIADB_ROOT_PASSWORD=root
